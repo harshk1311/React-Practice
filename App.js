@@ -1,21 +1,8 @@
-const parent = React.createElement("div",{id:"div1"},
-[React.createElement("div",{id:"div2"},
-[React.createElement("h1",{},"Hello H1"),React.createElement("h2",{},"Hello H2")])
-,
-React.createElement("div",{id:"div3"},
-[React.createElement("h1",{},"Hello H1"),React.createElement("h2",{},"Hello H2")])
-]
-);
+import React from 'react';
+import  ReactDOM  from 'react-dom/client';
 
 
-const parent1 = React.createElement("div",{id:"div1"},
-[React.createElement("div",{id:"div2"},
-[React.createElement("h1",{},"Hello H1"),React.createElement("h2",{},"Hello H2")])
-]
-);
+const heading = <h1 className='ha'>Hello Harsh</h1>
 
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-
-const footer=ReactDOM.createRoot(document.getElementById("footer"));
-footer.render(parent1);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(heading);

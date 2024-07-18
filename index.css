@@ -30,6 +30,7 @@
     width: 210px;
     padding: 10px;
     margin: 10px;
+    word-wrap: break-word;
 }
 
 .res-container{

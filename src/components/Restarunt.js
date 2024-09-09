@@ -7,7 +7,7 @@ const RestaruntComponent =(props) =>{
         <img className='res-logo' src={CDN_URL+cloudinaryImageId} />
 
         <h2>{name}</h2>
-        <h4>{cuisines.join(',')}</h4>
+        <h4 style={{wordBreak:'break-word'}}>{cuisines.join(',')}</h4>
         <h4>{locality +'  , ' + areaName}</h4>
         <h4> {avgRating} Stars</h4>
         </div>

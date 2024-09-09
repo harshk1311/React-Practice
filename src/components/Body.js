@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RestaruntComponent from "./Restarunt";
 import { SWIGGY_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 export const BodyComponent = ()=>{
      const arr=useState([]);
@@ -18,6 +19,7 @@ export const BodyComponent = ()=>{
           const data = await response.json();
           
           const info = data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+          console.log(info)
           
           setResList(info);
           setFilteredList(info);
@@ -50,15 +52,15 @@ export const BodyComponent = ()=>{
                     setFilteredList(filteredRestraunt)
                 }}>Search</button>
                 <button className="top-btn" onClick={()=>{
-                    const filteredList = resObjectList.filter((res)=>res.info.avgRatingString>4.5)
+                    const filteredList = resList.filter((res)=>res.info.avgRatingString>4.3)
                     // console.log(filteredList)
-                    setResList(filteredList);
+                    setFilteredList(filteredList);
                 }}>Top Rating Restarunt</button>
             </div>
 
             <div className='res-container'>
                 {
-                    filteredList.map(resObj => <RestaruntComponent key={resObj.info.id} resData={resObj} />)
+                    filteredList.map(resObj => <Link key={resObj.info.id} to={"/restaurnts/"+resObj.info.id}> <RestaruntComponent  resData={resObj}  /> </Link>)
 
                 }
                 {/* <RestaruntComponent resData={resObjectList[0]} /> */}

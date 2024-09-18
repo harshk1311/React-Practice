@@ -18,23 +18,23 @@ class About extends React.Component{
   
   constructor(props){
     super(props)
-    console.log(" About constructor  ");
+    // console.log(" About constructor  ");
   }
   
   
   componentDidMount(){
-    console.log("About Component Did Mount");
+    
+    // console.log("About Component Did Mount");
   };
 
   render(){
-    console.log("About Render Component  ");
+    
+    // console.log("About Render Component  ");
     return (
       <div>
         <h1>About Us</h1>
-        <User name={"Harsh KK Function"}  location={"Karve Nagar Pune"}/>
         <UserClass  name={"KK Class"}/>
-        <UserClass  name={"KK Class"}/>
-        <UserClass  name={"KK Class"}/>
+        {/* <User /> */}
       </div>
     )
   }

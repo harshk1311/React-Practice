@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import  ReactDOM  from 'react-dom/client';
 import Header from './src/components/Header';
 import BodyComponent from './src/components/Body';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import About from './src/components/About';
-import Contact from './src/components/Contact';
+// import About from './src/components/About';
+// import Contact from './src/components/Contact';
 import ErrorPage from './src/components/ErrorPage';
 import RestaurntMenu from './src/components/RestaurntMenu';
 
@@ -17,6 +17,8 @@ const AppComponent = ()=>{
     </div>)
 }
 
+const AboutLazyComp =lazy(()=>import('./src/components/About'))
+const ContactLazyComp =lazy(()=>import('./src/components/Contact'))
 
 const appRouters=createBrowserRouter([
     {
@@ -30,11 +32,15 @@ const appRouters=createBrowserRouter([
             },
             {
                 path:"/about",
-                element:<About />
+                element:<Suspense fallback={<h1>Loading ....!!!</h1>}>
+                    <AboutLazyComp />
+                </Suspense>
             },
             {
                 path:"/contact",
-                element:<Contact />
+                element:<Suspense>
+                    <ContactLazyComp />
+                </Suspense>
             },
             {
                 path:'/restaurnts/:resId',

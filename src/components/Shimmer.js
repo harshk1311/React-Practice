@@ -1,14 +1,14 @@
 const Shimmer =()=>{
-    return(<div className="shimmer-container">
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
-        <div className="shimmer-card"></div>
+    return(<div className="flex">
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
+        <div className="p-4 m-4 w-80 h-96  bg-gray-200"></div>
     </div>);
 }
 
